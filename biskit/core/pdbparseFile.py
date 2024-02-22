@@ -132,7 +132,7 @@ class PDBParseFile( PDBParser ):
                 for k in keys:
     
                     a = model.atoms.get( k, default=0, update=False )
-                    if (a is 0) or (a is None):
+                    if (a == 0) or (a is None):
                     
                         dflt = self.DEFAULTS.get( k, None )
                         model.atoms.set(k, atoms.get(k, dflt), changed=0 )
